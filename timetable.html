@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>
+            Time Table
+        </title>
+        <script type="text/javascript" src="TrainerService.js"></script>
+        <style>
+            fieldset
+            {
+                border:white;
+            }
+            table
+            {
+                border:blue 1px;
+            } 
+            .hovering
+            {
+                border: none;
+                
+                background-color: #eee;
+                transition: all ease-in-out 0.2s;
+                cursor: pointer;
+            }
+            .hovering:hover
+            {
+                border: 1px solid #888;
+                background-color: #ddd;
+            }
+            body{
+                text-align: center;
+            }
+            #gra
+            {
+                background-image: linear-gradient(to bottom right, rgb(255, 0, 149), rgb(98, 5, 112));
+            }
+            h1{
+                text-decoration-color: white;
+            }
+            h3{
+                text-align: center
+            }
+        </style>
+    </head>
+    <body id="gra">
+        <h1> SCHEDULE FOR THE DAY </h1>
+        <form>
+            <fieldset>
+                    <legend><h3>Trainer's Skillset</h3></legend>
+                
+                    <table>
+                    <tr><input type="text" id="tname" name="Name" placeholder="Enter name"/></tr>
+                    <tr><input type="checkbox"  name="skill" value="maths">Maths</tr>
+                    <tr><input type="checkbox"  name="skill" value="physics"> Physics</tr>
+                    <tr><input type="checkbox"  name="skill" value="english">English</tr>
+                    <tr><input type="checkbox"  name="skill" value="sports"> Sports</tr>
+                    <tr><input type="checkbox"  name="skill" value="biology"> Biology</tr><br><br>
+                    <tr></tr><input type="submit" value="Submit" onclick="TrainerService()">
+                
+                    </table>
+                  
+            </fieldset>
+        </form>
+
+    <fieldset>        
+
+        <h5>You can now hover on the subjects to find the trainers</h5>
+        <form action="tt2.html">
+        <table border="1" align="center">
+            
+    
+            <tr>
+                <th>Timings</th>
+                <th>Subject</th>
+                
+            </tr>
+            <tr>
+                <td>10-11</td>
+                <td><input class="hovering" type="button" title="Lara" value="English"/></td>
+                
+            </tr>
+            <tr>
+                <td>11-12</td>
+                <td><input class="hovering" type="button" title="John"value="Physics"/></td>
+                
+            </tr>
+            
+            <tr>
+                    <td>12-1</td>
+                    <td><input class="hovering" type="button"  title="Bob" value="Biology"></td>
+                    
+            </tr>
+            <tr>
+                    <td>1-2</td>
+                    <td><input class="hovering" type="button" title="Lindsay" value="BREAK"></td>
+                    
+            </tr>
+            <tr>
+                    <td>2-3</td>
+                    <td><input class="hovering" type="button" title="Misha" value="Maths"></td>
+                        
+            </tr>
+            <tr>
+                    <td>3-4</td>
+                    <td><input class="hovering" type="button" title="Jeremy" value="Sports"></td>
+                    
+            </tr>
+        </table>
+        <fieldset>
+                <h3>Choose your section</h3><br/>
+
+                <select>
+                    <option value="1">Section A</option>
+                    <option value="2">Section B</option>
+                </select>
+                <h5>Choose from the drop down menu</h5><br/>
+            
+            </fieldset>
+        
+        <input type="submit" value="Display Schedule"/><br/>
+        
+
+    
+     </fieldset>
+    </form>
+    
+    </body>
+</html>

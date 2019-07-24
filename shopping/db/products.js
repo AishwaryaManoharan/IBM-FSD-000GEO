@@ -2,28 +2,33 @@ const products=[
     {
         id:1,
         name:bag,
-        price:1000
+        price:1000,
+        quantity:1
 
     },
     {
         id:2,
         name:laptop,
-        price:40000
+        price:40000,
+        quantity:1
     },
     {
         id:3,
         name:shirt,
-        price:600
+        price:600,
+        quantity:1
     },
     {
         id:4,
         name:mobile,
-        price:20000    
+        price:20000,    
+        quantity:1
     },
     {
         id:5,
         name:pillow,
-        price:500
+        price:500,
+        quantity:1
     }
 ]
 module.exports={

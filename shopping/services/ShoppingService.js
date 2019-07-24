@@ -1,15 +1,37 @@
-const projects = require('../db/projects').projects;
-class ShoppingService{
+const products=require('../db/products').products;
+const Email= require('.services/emailService').Email;
+const setContentHeader = require('../services/utils').setContentHeader;
+const utils= require('../services/utils').utils;
+const email=new Email();
+class Service
+{
     constructor(){
-        this.projects = projects;
+        this.products=products;
     }
     _all(){
-        return this.projects;
+        return this.products;
     }
-    _add(project){
-        this.projects.push(project);
-        return this.projects;
+
+    searchProduct(prod){
+        this.products=products;
+        this.products.forEach((p)=>{
+            if(p.id==prod.id){
+                return p;
+            }
+        });
+    }
+
+    buy(user){
+        let userObj ={
+            subject : "User Registration",
+            body : `<div>Dear Customer</div>
+                    <div>Thanks for Shopping</div>`,
+            from : null,
+            to : user.email
+        }
+        email.email(userObj);
     }
 }
-
-module.exports.ShoppingService = ShoppingService;
+module.exports={
+    Service
+}

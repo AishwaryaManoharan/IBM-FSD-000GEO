@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>
+            SHOP NOW
+        </title>
+        <link rel = "icon" type ="image/jpg" href = "cart.jpg">
+        <script>
+
+            function myFunction() 
+            {
+            // Declaring variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Hiding those who don't match the search query
+             for (i = 0; i < li.length; i++) {
+             a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) 
+            {
+             li[i].style.display = "";
+            } 
+            else
+            {
+             li[i].style.display = "none";
+            }
+            }
+        }
+
+
+            const display=()=>{
+                const product=document.getElementById('product').value;
+                const _url=`http://localhost:1234/display?product=$product`;
+            }
+            fetch (_url)
+            .then(res=>res.json())
+            .then((res)=>{
+                if(res.id!=null)
+                {
+                    document.location="shop2.html";
+                }
+                else
+                {
+                    document.getElementById('error').innerHTML='Item unavailable';
+                }
+                console.log(res);
+            })
+        
+
+        </script>
+        <style>
+            fieldset{
+                text-align: center;
+                font-style:bold;
+                background-color:rgb(148, 148, 219);
+            }
+            section{
+                background-image: linear-gradient(rgb(148, 148, 219),white)
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <fieldset>
+            <h1>SHOP NOW</h1>
+            <h3>Your only shopping destination</h3>
+            </fieldset>
+        </header>
+        <section>
+            <ul>
+                <li>Home</li>
+                <li><a href="e1.html">View Cart</a></li>
+            </ul>
+        </section>
+        <form>
+            
+            
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for items here..">
+
+                <ul id="myUL">
+                  <li><a href="bag.html">Bags</a></li>
+                  <li><a href="laptop.html">Laptops</a></li>
+                  <li><a href="shirt.html">Shirts</a></li>
+                  <li><a href="mobile.html">Mobiles</a></li>
+                  <li><a href="pillow.html">Pillows</a></li>
+                  
+                </ul>
+           <input type="button" value="search" onclick="display()"/>
+        </form>
+        <img src="bags.jpg" height="400px" width="300px"/>
+        <img src="laptop.jpg" height="400px" width="300px"/>
+        <img src="shirt.png" height="400px" width="300px"/>
+        <img src="mobile.jpg" height="400px" width="300px"/>
+        <img src="pillow.jpg" height="400px" width="300px"/>
+    </body>
+    <div id="error">
+
+    </div>
+    <footer>
+        <ul>
+            SHOP NOW @
+            <li>India</li>
+            <li>US</li>
+            <li>Japan</li>
+        </ul>
+    </footer>
+</html>

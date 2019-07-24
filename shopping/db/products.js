@@ -1,0 +1,31 @@
+const products=[
+    {
+        id:1,
+        name:bag,
+        price:1000
+
+    },
+    {
+        id:2,
+        name:laptop,
+        price:40000
+    },
+    {
+        id:3,
+        name:shirt,
+        price:600
+    },
+    {
+        id:4,
+        name:mobile,
+        price:20000    
+    },
+    {
+        id:5,
+        name:pillow,
+        price:500
+    }
+]
+module.exports={
+    products
+}

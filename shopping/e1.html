@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>
+            CART SUMMARY
+        </title>
+        <link rel="stylesheet" href="e2.css" type="text/css"/>
+        <script type="text/javascript">
+        function incrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<10){
+        value++;
+            document.getElementById('number').value = value;
+    }
+}
+function decrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+            document.getElementById('number').value = value;
+    }
+
+}
+
+function final()
+{
+  value=document.getElementById("number");
+  document.getElementByID('total-price').innerHTML=1000*value;
+}
+
+        </script>
+        
+    </head>
+    <body>
+    <div class="shopping-cart">
+        <!-- Title -->
+        <div class="title">
+          THE <b>SHOP NOW</b> CART
+        </div>
+       
+        <!-- Product 1 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="delete-btn"></span>
+            <span class="like-btn"></span>
+          </div>
+       
+          <div class="image">
+            <img src="bags.jpg" height="100px" width="150px" alt="" />
+          </div>
+       
+          <div class="description">
+              <span><b>BAG</b></span>
+            <span>Gucci</span>
+            <span>Blue</span>
+          </div>
+       
+          <div class="container">
+                <input type="button" onclick="decrementValue()" value="-" />
+                <input type="text" name="quantity" value="1" maxlength="2" max="100" size="1" id="number" />
+                <input type="button" onclick="incrementValue()" value="+" />
+                <input type="button" value="ok" onclick="final()"/>
+            </div>
+       
+          <div class="total-price">1000</div>
+        </div>
+       
+        <!-- Product 2 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="delete-btn"></span>
+            <span class="like-btn"></span>
+          </div>
+       
+          <div class="image">
+            <img src="laptop.jpg" height="100px" width="150px" alt=""/>
+          </div>
+       
+          <div class="description">
+              <span><b>LAPTOP</b></span>
+            <span>HP</span>
+            <span>Black</span>
+          </div>
+       
+          <div class="container">
+                <input type="button" onclick="decrementValue()" value="-" />
+                <input type="text" name="quantity" value="1" maxlength="2" max="100" size="1" id="number" />
+                <input type="button" onclick="incrementValue()" value="+" />
+                </div>
+
+          <div class="total-price">40000</div>
+        </div>
+       
+        <!-- Product 3 -->
+        <div class="item">
+          <div class="buttons">
+            <span class="delete-btn"></span>
+            <span class="like-btn"></span>
+          </div>
+       
+          <div class="image">
+            <img src="shirt.png" height="100px" width="150px" alt="" />
+          </div>
+       
+          <div class="description">
+              <span><b>SHIRT</b></span>
+            <span>max</span>
+            <span>Blue</span>
+          </div>
+       
+          <div class="container">
+                <input type="button" onclick="decrementValue()" value="-" />
+                <input type="text" name="quantity" value="1" maxlength="2" max="100" size="1" id="number" />
+                <input type="button" onclick="incrementValue()" value="+" />
+                </div>
+       
+          <div class="total-price">600</div>
+        </div>
+      </div>
+      <div align="center">
+        <input type="button" value="PROCEED TO PAY"/>
+      </div>
+      </body>
+      </html>

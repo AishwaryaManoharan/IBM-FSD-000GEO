@@ -1,9 +1,10 @@
 const express=require('express');
 const server=express();
 const parser=require('body-parser');
+const cors=require('cors');
 
 server.use(parser.json());
-
+server.use(cors());
 // status 
 server.get('/status',(req,res)=>{
     res.setHeader('content-type','application/json');

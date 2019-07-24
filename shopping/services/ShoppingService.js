@@ -12,10 +12,10 @@ class Service
         return this.products;
     }
 
-    searchProduct(prod){
+    searchProduct(pro){
         this.products=products;
-        this.products.forEach((p)=>{
-            if(p.id==prod.id){
+        this.products.forEach((pro)=>{
+            if(pro.id==pro.id){
                 return p;
             }
         });

@@ -1,0 +1,11 @@
+package comm.example;
+
+public class Tester5
+{
+public static void main(String[] args)
+{
+	Stackhere s=new Stackhere();
+	s.push(5);
+	s.push(4);
+}
+}

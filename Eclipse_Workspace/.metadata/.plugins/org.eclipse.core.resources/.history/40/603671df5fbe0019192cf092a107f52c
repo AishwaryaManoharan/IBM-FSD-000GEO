@@ -1,0 +1,16 @@
+package comm.example;
+
+public class CaseTester {
+
+	public static void main()
+	{
+		try {
+		UpperCase u=new UpperCase();
+		System.out.println(u.check("Aishwarya","manoharan"));
+		}
+		catch(MyException e) {
+			e.getMessage();
+		}
+	}	
+			
+}

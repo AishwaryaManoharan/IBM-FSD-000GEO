@@ -1,0 +1,19 @@
+package comm.example;
+
+public class AccountTester {
+	
+	public static void main(String[] args)
+	{
+	Account account=new Account();
+	
+	try
+	{
+		account.createNewAccount("AISH23",10000);
+	}
+	catch(AccountNotValidException e)
+	{
+		System.out.println(e.getMessage());
+	}
+	
+	}
+}

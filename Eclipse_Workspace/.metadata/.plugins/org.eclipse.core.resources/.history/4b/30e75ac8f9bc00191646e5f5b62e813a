@@ -1,0 +1,56 @@
+package comm.example.client;
+
+public class Account {
+	private String bname;
+
+	public Account()
+	{
+		System.out.println("Inside Account default");
+	}
+	
+	public Account(String bname)
+	{
+		System.out.println("Inside Account para");
+		this.bname=bname;
+	}
+	
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Account other = (Account) obj;
+		if (bname == null) {
+			if (other.bname != null)
+				return false;
+		} else if (!bname.equals(other.bname))
+			return false;
+		return true;
+	}
+	
+	
+
+	public String getBname() {
+		return bname;
+	}
+
+	public void setBname(String bname) {
+		this.bname = bname;
+	}
+	
+	
+	protected String getDetails()
+	{
+		return "name"+bname;
+	}
+}
+

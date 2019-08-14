@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;comm.example.constructor.java&apos; to &apos;Cons.java&apos;&#x0D;&#x0A;- Original project: &apos;12_08_2019&apos;&#x0D;&#x0A;- Original element: &apos;comm.example.constructor.java&apos;&#x0D;&#x0A;- Renamed element: &apos;comm.example.Cons.java&apos;" description="Rename compilation unit &apos;constructor.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;comm.example{constructor.java" name="Cons.java" references="false" stamp="1565593356713" version="1.0"/>
+</session>

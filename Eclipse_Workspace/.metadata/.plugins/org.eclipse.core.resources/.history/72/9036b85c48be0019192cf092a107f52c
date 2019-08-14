@@ -1,0 +1,7 @@
+
+
+public class Flyer {
+	public abstract void fly();
+	
+
+}

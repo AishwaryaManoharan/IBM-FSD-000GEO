@@ -1,0 +1,42 @@
+package comm.example;
+
+public class Account {
+	
+	private double amount;
+	private String accountNumber;
+	
+	
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	@override
+	public String toString()
+	{
+	return "Account[accontNumber="+accountNumber+",amount="+amount+"]";
+	}
+
+public Account createNewAccount(string accountNumber,double amount) throws AccountNotValidException
+{
+this.accountNumber=accountNumber;
+this.amount=amount;
+if(amount<10000)
+{
+	throw new accountNotValidException("A valid account can't be created");
+}
+return new Account(accountNumber,account);
+
+}

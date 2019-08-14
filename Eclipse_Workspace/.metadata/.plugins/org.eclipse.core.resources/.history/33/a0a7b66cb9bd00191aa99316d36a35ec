@@ -1,0 +1,8 @@
+package comm.example;
+
+public class Tester6 {
+public static void main(String[] args) {
+	Modell m=new Square().new Modell();
+	m.show();
+}
+}

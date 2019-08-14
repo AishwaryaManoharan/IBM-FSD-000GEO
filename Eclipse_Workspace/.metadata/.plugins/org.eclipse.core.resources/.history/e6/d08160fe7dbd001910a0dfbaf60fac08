@@ -1,0 +1,8 @@
+package comm.example;
+
+public class Flyer {
+	
+	public abstract void fly();
+	
+
+}

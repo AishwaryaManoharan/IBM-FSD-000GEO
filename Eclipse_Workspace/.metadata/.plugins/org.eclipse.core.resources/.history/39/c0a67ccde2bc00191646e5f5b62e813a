@@ -1,0 +1,13 @@
+package comm.example.client;
+public class Tester1 {
+
+	public static void main(String args[])
+	{
+		Employee e=null;
+		e=new PermanentEmployee();
+		System.out.println(e.getDetails());
+		//System.out.println(e.getDetails());
+		
+	}
+}
+

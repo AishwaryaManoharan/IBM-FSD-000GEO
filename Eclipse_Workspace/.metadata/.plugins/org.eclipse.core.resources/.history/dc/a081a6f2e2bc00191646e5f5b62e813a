@@ -1,0 +1,22 @@
+package comm.example.client;
+
+public class PermanentEmployee extends Employee {
+	private int salary;
+	
+	public PermanentEmployee()
+	{
+		System.out.println("Inside PEmployee default");
+	}
+	
+	public PermanentEmployee(int salary)
+	{
+		System.out.println("Inside PEmployee para");
+		this.salary=salary;
+	}
+	
+	protected String getDetails()
+	{
+		return "salary"+salary;
+	}
+
+}

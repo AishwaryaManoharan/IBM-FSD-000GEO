@@ -1,0 +1,21 @@
+package comm.example.client;
+
+public class ContractualEmployee {
+	private int rph;
+
+	public ContractualEmployee()
+	{
+		System.out.println("Inside Employee default");
+	}
+	
+	public ContractualEmployee(int rph)
+	{
+		System.out.println("Inside Employee para");
+		this.rph=rph;
+	}
+	
+	protected String getDetails()
+	{
+		return "rph"+rph;
+	}
+}

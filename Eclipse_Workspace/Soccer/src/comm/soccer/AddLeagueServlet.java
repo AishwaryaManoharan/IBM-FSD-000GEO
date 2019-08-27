@@ -1,4 +1,4 @@
-package comm.servlet;
+package comm.soccer;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DynamicServlet
+ * Servlet implementation class AddLeagueServlet
+ * 
  */
-@WebServlet("/DynamicServlet")
-public class DynamicServlet extends HttpServlet {
+@WebServlet("/add_league.view")
+public class AddLeagueServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DynamicServlet() {
+    public AddLeagueServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +30,7 @@ public class DynamicServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		processRequest(request,response);
+		processRequest(request, response);
 	}
 
 	/**
@@ -39,11 +40,15 @@ public class DynamicServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		processRequest(request, response);
 	}
-	
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
-		out.println("Request done");
+		
+		String title=request.getParameter("title").toString();
+		out.println("welcome to "+title);
+		
+		
+		
 	}
 
 }

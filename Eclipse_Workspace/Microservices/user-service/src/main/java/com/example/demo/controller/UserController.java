@@ -49,30 +49,5 @@ public class UserController {
 		return list;
 	}
 	
-	@GetMapping("/user/{id}")
-	public ResponseEntity<CreateUserResponseModel> findUser(@PathVariable("id") String userID){
-		ModelMapper mapper = new ModelMapper();
-		User user = service.findUser(userID);
-		CreateUserResponseModel model = mapper.map(user, CreateUserResponseModel.class);
-		return ResponseEntity.status(HttpStatus.CREATED).body(model);
-		
-	}
 	
-	@DeleteMapping("/user/{id}")
-	public ResponseEntity<CreateUserResponseModel> deleteUser(@PathVariable("id") String userID){
-		ModelMapper mapper = new ModelMapper();
-		User user = service.deleteUser(userID);
-		CreateUserResponseModel model = mapper.map(user, CreateUserResponseModel.class);
-		return ResponseEntity.status(HttpStatus.GONE).body(model);	
-	} 
-	
-	@PutMapping("/user/{id}")
-	public ResponseEntity<CreateUserResponseModel> updateUser(@RequestBody CreateUserRequestModel userDetail,@PathVariable("id") String userID){
-		ModelMapper mapper = new ModelMapper();
-		UserDto dto = mapper.map(userDetail, UserDto.class);
-		UserDto dto1 = service.updateUser(dto, userID);
-		CreateUserResponseModel user = mapper.map(dto1, CreateUserResponseModel.class);
-		return ResponseEntity.status(HttpStatus.CREATED).body(user);
-	
-	}
 }

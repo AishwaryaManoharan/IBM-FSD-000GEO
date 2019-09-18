@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.CreateUserRequestModel;
-import com.mycompany.model.CreateUserResponseModel;
-import com.mycompany.service.UserService;
-import com.mycompany.shared.UserDto;
+import com.example.demo.UserService;
+import com.example.demo.model.CreateUserRequestModel;
+import com.example.demo.model.CreateUserResponseModel;
+import com.example.demo.shared.UserDto;
+
+
 
 @RestController
 @RequestMapping("/")

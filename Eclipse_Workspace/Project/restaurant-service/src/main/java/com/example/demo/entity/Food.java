@@ -12,10 +12,8 @@ public class Food {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	
-
 	@ManyToMany
-	@JoinTable(name = "restaurant_food", joinColumns = @JoinColumn(name = "food_id"), inverseJoinColumns = @JoinColumn(name = "restaurant_id"))
+	@JoinTable(name = "restaurant_food", joinColumns = @JoinColumn(name = "food_id"), inverseJoinColumns = @JoinColumn(name = "resId"))
 	private Set<Restaurant> restaurants = new HashSet<>();
 	
 	public Food() {

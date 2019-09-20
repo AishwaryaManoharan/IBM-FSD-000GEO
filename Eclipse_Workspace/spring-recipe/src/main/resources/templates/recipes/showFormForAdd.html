@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save/Add a new  recipe</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>Recipe Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Delicious Recipes</p>
+	
+		<form action="#" th:action="@{/recipes/save}"
+						 th:object="${recipe}" method="POST">
+		
+			<input type="text" th:field="*{recipe_id}"
+					class="form-control mb-4 col-4" placeholder="Enter no of your choice">
+
+			<input type="text" th:field="*{preptime}"
+					class="form-control mb-4 col-4" placeholder="What's the prep time">
+
+			<input type="text" th:field="*{difficulty}"
+					class="form-control mb-4 col-4" placeholder="Statelevel of difficulty">
+				
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/recipes/list}">Back to  List</a>
+		
+	</div>
+</body>
+
+</html>
+
